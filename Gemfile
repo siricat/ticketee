@@ -16,6 +16,8 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
+gem 'dynamic_form', "~> 1.1.4"
+
 group :test, :development do 
   gem 'rspec-rails', '~> 2.5'
 end
@@ -27,3 +29,4 @@ group :test do
 end
 
 gem 'jquery-rails'
+
