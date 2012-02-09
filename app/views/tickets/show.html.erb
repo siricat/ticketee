@@ -1,4 +1,6 @@
 <div id="ticket">
   <h2><%= @ticket.title %></h2>
+  <!-- understands that is the edit_project_ticket_path - below -->
+  <%= link_to "Edit Ticket", [:edit, @project, @ticket] %>
   <%= simple_format(@ticket.description) %>
 </div>
