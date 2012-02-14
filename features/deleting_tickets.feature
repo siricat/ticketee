@@ -11,7 +11,7 @@ Feature: Deleting tickets
   Given there is a project called "TextMate 2"
   And "user@ticketee.com" has created a ticket for this project:
     | title          | description |
-    | Make it shiny! | Gradients! Starbursts! Oh my! |
+    | Make it shiny! | Gradients! Starbursts! Oh my! | 
     Given I am on the homepage
     When I follow "TextMate 2"
     And I follow "Make it shiny!"
