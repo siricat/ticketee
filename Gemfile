@@ -31,5 +31,6 @@ group :test do
 end
 
 gem 'devise', '~> 1.4.3'
+gem 'cancan'
 gem 'jquery-rails'
 
