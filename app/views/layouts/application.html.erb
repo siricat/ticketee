@@ -15,13 +15,14 @@
 </head>
 <body>
   
+<h1><%= link_to "Ticketee", root_path %></h1>
+
 <% flash.each do |key, value| %>
   <div class="flash" id="<%= key %>">
     <%= value %>
   </div>
 <% end %>
 
-<h1><%= link_to "Ticketee", root_path %></h1>
 <nav>
   <%= admins_only do %>
     <%= link_to "Admin", admin_root_path %><br>
