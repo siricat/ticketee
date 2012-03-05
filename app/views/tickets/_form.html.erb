@@ -1,4 +1,7 @@
-<%= form_for [@project, @ticket] do |f| %>
+<%= form_for [@project, @ticket], :html => { :multipart => true } do |f| %>
+<!-- multipart is used for any html form with a file-upload field inside -->
+<!-- rails 3.1+ doesn't need that but preferable (at least to ryan bigg) -->
+
   <%= f.error_messages %>
   <p>
     <%= f.label :title %>
@@ -7,6 +10,10 @@
   <p>
     <%= f.label :description %>
     <%= f.text_area :description %>
+  </p>
+  <p>
+    <%= f.label :asset, "File" %>
+    <%= f.file_field :asset %>
   </p>
   <%= f.submit %>
 <% end %>
