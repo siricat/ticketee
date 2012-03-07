@@ -32,13 +32,13 @@ end
 World(WithinHelpers)
 
 # Single-line step scoper
-When /^(.*) within (.*[^:])$/ do |step, parent|
-  with_scope(parent) { step }
+When /^(.*) within (.*[^:])$/ do |steps, parent|
+  with_scope(parent) { step steps }
 end
 
 # Multi-line step scoper
-When /^(.*) within (.*[^:]):$/ do |step, parent, table_or_string|
-  with_scope(parent) { When "#{step}:", table_or_string }
+When /^(.*) within (.*[^:]):$/ do |steps, parent, table_or_string|
+  with_scope(parent) { When "#{steps}:", table_or_string }
 end
 
 Given /^(?:|I )am on (.+)$/ do |page_name|

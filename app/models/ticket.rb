@@ -6,6 +6,7 @@ class Ticket < ActiveRecord::Base
  # accepts_nested_attributes_for tells the model to accept asset attributes 
  # and ticket attributes whenever methods like new, build or update are called
   accepts_nested_attributes_for :assets
+  has_many :comments
   
   validates :title, :presence  => true
   validates :description, :presence  => true, :length => { :minimum => 10 }
