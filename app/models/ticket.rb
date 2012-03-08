@@ -1,6 +1,7 @@
 class Ticket < ActiveRecord::Base
 
   belongs_to :project
+  belongs_to :state
   belongs_to :user
   has_many :assets
  # accepts_nested_attributes_for tells the model to accept asset attributes 

@@ -10,7 +10,7 @@ class CommentsController < ApplicationController
       redirect_to [@ticket.project, @ticket]
     else
       flash[:alert] = "Comment has not been created."
-      render :template => "tickets/show"
+      render "tickets/show"
     end
   end
   
