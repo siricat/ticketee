@@ -1,10 +1,14 @@
 class Comment < ActiveRecord::Base
   
+  # this is run before a record is created, but after the validations are run
+  # will only be run on objects about to be saved to the db for the first time
+  before_create :set_previous_state
   after_create :set_ticket_state
-  
+    
   belongs_to :ticket
   belongs_to :user
   belongs_to :state
+  belongs_to :previous_state, :class_name => "State"
   
   validates :text, :presence => true
   
@@ -12,6 +16,10 @@ class Comment < ActiveRecord::Base
   
   private
   
+    def set_previous_state
+      self.previous_state = ticket.state
+    end
+    
     def set_ticket_state
       self.ticket.state = self.state
       self.ticket.save!

@@ -113,7 +113,7 @@ ul#tickets .state {
     font-size: 75%;
 }
 
-menu, #ticket .state, .states {
+menu, .states {
     float: right;
 }
 
