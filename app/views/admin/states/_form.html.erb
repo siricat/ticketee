@@ -1,0 +1,16 @@
+<%= form_for [:admin, @state] do |f| %>
+  <p>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :color %>
+    <%= f.text_field :color %>
+  </p>
+  <p>
+    <%= f.label :background %>
+    <%= f.text_field :background %>
+  </p>    
+  <%= f.submit %>
+  <%= link_to "Delete State", admin_state_path, :method => :delete, :confirm => "Are you sure you want to delete this state?" %>  
+<% end %>

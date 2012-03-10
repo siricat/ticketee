@@ -1,0 +1,7 @@
+<% title(@state.name) %>
+
+<h2><%= @state.name %></h2>
+  <%= admins_only do %>
+    <%= link_to "Edit State", edit_admin_state_path(@state) %>
+    <%= link_to "Delete State", @state, :method => :delete, :confirm => "Are you sure you want to delete this state?" %>
+  <% end %>
