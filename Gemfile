@@ -20,13 +20,14 @@ gem 'dynamic_form', "~> 1.1.4"
 
 group :test, :development do 
   gem 'rspec-rails', '~> 2.5'
+  gem 'factory_girl'
 end
 
 group :test do 
   gem 'cucumber-rails-training-wheels'
   gem 'capybara' 
   gem 'database_cleaner'
-  gem 'factory_girl'
+  # gem 'factory_girl'
   gem 'email_spec'
   gem 'launchy'
 end
