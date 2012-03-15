@@ -2,7 +2,13 @@ class Ticket < ActiveRecord::Base
 
   searcher do
     label :tag, :from => :tags, :field => :name
+    label :state, :from => :state, :field => "name"
   end
+  
+  # can now search like this:
+  # tag:name_of_tag, tag:iteration_1
+  # state:name_of_state, state:Open
+  # can also chain search, tag:css state:Open
 
   belongs_to :project
   belongs_to :state
