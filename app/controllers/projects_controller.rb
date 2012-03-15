@@ -8,6 +8,10 @@ class ProjectsController < ApplicationController
     @projects = Project.for(current_user).all
   end
   
+  def show
+    @tickets = @project.tickets
+  end
+  
   def new
     @project = Project.new
   end
@@ -22,11 +26,7 @@ class ProjectsController < ApplicationController
       render :action => "new"
     end
   end
-  
-  def show
-    @project = Project.find(params[:id])
-  end
-  
+    
   def edit
     @project = Project.find(params[:id])
   end

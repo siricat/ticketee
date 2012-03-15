@@ -36,5 +36,6 @@ gem 'devise', '~> 1.4.3'
 gem 'cancan'
 
 gem 'paperclip'
+gem 'searcher'
 gem 'jquery-rails'
 
