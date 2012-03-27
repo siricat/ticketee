@@ -17,4 +17,4 @@
 public/system
 
 config/initializers/mail.rb 
-features/gmail.feature
+
