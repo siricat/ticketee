@@ -19,6 +19,7 @@ end
 gem 'dynamic_form', "~> 1.1.4"
 
 group :test, :development do 
+  gem 'gmail'
   gem 'rspec-rails', '~> 2.5'
   gem 'factory_girl'
 end
