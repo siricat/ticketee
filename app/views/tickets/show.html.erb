@@ -17,6 +17,16 @@
   
   <div id="tags"><%= render @ticket.tags %></div>
   
+  <div id="watchers">
+    <%= toggle_watching_button %>
+    <h4>Watchers</h4>
+    <ul>
+      <% @ticket.watchers.each do |watcher| %>
+        <li><%= watcher %></li>
+      <% end %>
+    </ul>
+  </div>
+  
   <% if @ticket.assets.exists? %>
     <h3>Attached Files</h3>
     <div class="assets">
